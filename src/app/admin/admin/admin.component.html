@@ -1,0 +1,43 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"> <img src="assets/webinar.png" id="webinar"> Espace Admin</div>
+      <div class="list-group list-group-flush">
+        <a routerLink="./dashboard" class="list-group-item list-group-item-action bg-light"><img src="assets/stat.png">Dashboard</a>
+        <a routerLink="./liste" class="list-group-item list-group-item-action bg-light"> <img src="assets/icon2.png" alt=""> Sessions</a>
+        <a routerLink="./formateur" class="list-group-item list-group-item-action bg-light"> <img src="assets/formateur.png" alt=""> Formateurs</a>
+        <a routerLink="./participant" class="list-group-item list-group-item-action bg-light"> <img src="assets/icon1.png" alt=""> Participants</a>
+        <a></a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        
+        <button class="btn btn-primary" id="menu-toggle" (click)="toggleSidebar()"><img src="assets/list.png" alt=""></button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+           
+            <li class="nav-item">
+              <p>{{ myDate | date: 'dd/MM/yyyy' }}  Tunis</p>
+            </li>
+            <li class="nav-item disconnect">
+              <img src="assets/logout.png">
+             
+            
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <router-outlet> </router-outlet>
+        
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+
+
